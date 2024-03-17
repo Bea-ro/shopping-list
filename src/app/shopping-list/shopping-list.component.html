@@ -1,0 +1,11 @@
+<app-add-item (itemAdded)="itemAdded($event)"></app-add-item>
+<div *ngIf="Items.length > 0; else emptyList">
+  <app-item
+    *ngFor="let item of Items"
+    [name]="item.name"
+    [(isBuyed)]="item.isBuyed"
+  ></app-item>
+</div>
+<ng-template #emptyList>
+  <p>Tu lista de la compra está vacía.</p>
+</ng-template>
