@@ -4,6 +4,7 @@
     *ngFor="let item of Items"
     [name]="item.name"
     [(isBuyed)]="item.isBuyed"
+    (change)="saveLocalStorage()"
   ></app-item>
 </div>
 <ng-template #emptyList>
