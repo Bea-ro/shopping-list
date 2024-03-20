@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { HighlightItemDirective } from '../../directives/highlight-item.directive';
 
 @Component({
   selector: 'app-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HighlightItemDirective],
   templateUrl: './item.component.html',
   styleUrl: './item.component.css',
 })

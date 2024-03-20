@@ -5,11 +5,9 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
   standalone: true,
 })
 export class HighlightItemDirective {
-  @HostBinding('style.backgroundColor') public background: string =
-    'transparent';
+  @HostBinding('style.fontWeight') public highlightedItem: string = '300';
   @HostListener('mouseover') public onMouseEnter() {
-    console.log('ratón encima');
-    this.background = 'green';
+    this.highlightedItem = '600';
   }
 
   constructor() {}

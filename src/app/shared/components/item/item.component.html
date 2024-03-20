@@ -1,4 +1,4 @@
 <div *ngIf="name" class="item">
   <input type="checkbox" (change)="isBuyedToggle()" [checked]="isBuyed" />
-  <p>{{ name }}</p>
+  <p appHighlightItem>{{ name }}</p>
 </div>
